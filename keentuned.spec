@@ -58,6 +58,9 @@ fi
 %{_prefix}/lib/systemd/system/keentuned.service
 
 %changelog
+* Mon Jul 15 2022 Wenchao Liu <wb-lwc921938@alibaba-inc.com> - 1.3.0
+- UI backend support
+
 * Mon Jun 20 2022 Wenchao Liu <wb-lwc921938@alibaba-inc.com> - 1.2.1-2
 - fix: Clear task residue on startup
 
