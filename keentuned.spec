@@ -1,8 +1,8 @@
 %define debug_package %{nil}
-%define anolis_release 1
+%define anolis_release 0
 
 Name:           keentuned
-Version:        1.3.2
+Version:        1.3.3
 Release:        %{?anolis_release}%{?dist}
 Url:            https://gitee.com/anolis/keentuned
 Summary:        KeenTune tuning tools
@@ -10,6 +10,7 @@ Vendor:         Alibaba
 License:        MulanPSLv2
 Source:         https://gitee.com/anolis/keentuned/repository/archive/%{name}-%{version}.tar.gz
 
+Autoreq:        0
 BuildRequires:  go >= 1.13
 BuildRequires:	systemd
 
@@ -63,6 +64,9 @@ fi
 %{_mandir}/man7/keentune-detect.7*
 
 %changelog
+* Wed Oct 12 2022 Wenchao Liu <wb-lwc921938@alibaba-inc.com> - 1.3.3-0
+- Add：Support detect MEM with Scope [29, 32]
+
 * Wed Aug 31 2022 Wenchao Liu <wb-lwc921938@alibaba-inc.com> - 1.3.2-1
 - fix some issues
 
