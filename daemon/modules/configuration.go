@@ -107,7 +107,7 @@ func collectParam(applyResp map[string]interface{}) (string, map[string]Paramete
 			continue
 		}
 
-		failedDetail := utils.FormatInTable(failedInfoSlice)
+		failedDetail := utils.FormatInTable(failedInfoSlice, "\t\t\t")
 		setResult += fmt.Sprintf("%v; the failed details:%s\n", successInfo, failedDetail)
 	}
 
