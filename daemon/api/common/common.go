@@ -17,6 +17,7 @@ import (
 	"os"
 	"strings"
 	"syscall"
+	"flag"
 )
 
 type deleter struct {
