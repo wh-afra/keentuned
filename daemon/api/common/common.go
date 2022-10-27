@@ -107,7 +107,9 @@ func KeenTunedService(quit chan os.Signal) {
 			}
 		}
 	}()
-
+        directory := flag.String("d", ".", "the directory of static file to host")
+	flag.Parse()
+	http.Handle("/", http.FileServer(http.Dir(*directory)))
 	err := http.ListenAndServe(":"+config.KeenTune.Port, nil)
 	if err != nil {
 		log.Errorf("", "listen and serve err: %v", err)
