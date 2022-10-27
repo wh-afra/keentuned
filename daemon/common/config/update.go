@@ -84,7 +84,7 @@ func (c *KeentunedConf) updateDefault(cfg *ini.File, cmd string) error {
 	}
 
 	// Required: algorithm
-	algo := empty.Key("ALGORITHM").MustString("")
+	algo := empty.Key("ALGORITHM").MustString("tpe")
 	if algo == "" {
 		return fmt.Errorf("algorithm is required")
 	}
